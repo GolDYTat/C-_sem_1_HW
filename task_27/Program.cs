@@ -14,7 +14,6 @@ int Count(int numb)
 }
 
 int count = Count(number);
-Console.WriteLine($"{count}");
 
 int SumDigit(int num)
 {
