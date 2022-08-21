@@ -9,21 +9,21 @@ int[] CreateArray(int size)
 
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.Next(100, 1000);
+        array[i] = rnd.Next(0, 100);
     }
     return array;
 }
 
-int CountEvenNum (int[] array)
+int SumNum (int[] array)
 {
-    int count = 0;
+    int sum = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        int even = array[i] % 2;
-        if (even == 0) count++;
-        else count = count;
+        int even = i % 2;
+        if (even == 0) sum = sum;
+        else sum += array[i];
     }
-    return count;
+    return sum;
 }
 
 void PrintArray(int[] array)
@@ -39,5 +39,6 @@ void PrintArray(int[] array)
 
 int[] arr = CreateArray(sz);
 PrintArray(arr);
-int cnt = CountEvenNum(arr);
-Console.Write($"Колличество четных чисел в массиве - {cnt}");
+int sum = SumNum(arr);
+Console.Write($"Сумма элементов, стоящих на нечетных индексах = {sum}");
+
