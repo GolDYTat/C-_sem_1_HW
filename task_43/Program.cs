@@ -12,7 +12,7 @@ Console.WriteLine($"Уравнение первой прямой: y = {k1}x + {b
 
 double PointOfIntersectionX (double kk1, double bb1, double kk2, double bb2)
 {
-    // if (kk1 == kk2) Console.WriteLine("Прямые параллельны");
+    if (kk1 == kk2) Console.WriteLine("Прямые параллельны");
     return (bb2 - bb1) / (kk1 - kk2);
 }
 
