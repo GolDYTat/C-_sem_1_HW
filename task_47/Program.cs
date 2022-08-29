@@ -33,5 +33,5 @@ void PrintMatrix(double[,] matrix)
     }
 }
 
-double[,] newMatrix = CreateMatrix(3, 4);
+double[,] newMatrix = CreateMatrix(r, c);
 PrintMatrix(newMatrix);
